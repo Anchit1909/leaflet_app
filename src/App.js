@@ -4,7 +4,7 @@ import HorizontalBar from "./components/HorizontalBar";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <MapComponent />
       <HorizontalBar />
     </div>
