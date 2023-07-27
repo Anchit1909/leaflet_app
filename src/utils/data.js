@@ -21,7 +21,7 @@ const data = [
   {
     id: 4,
     region: "SE",
-    data: 590,
+    data: 800,
     coordinate: [9.8, 50.0001],
   },
   {

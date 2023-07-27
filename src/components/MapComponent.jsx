@@ -10,7 +10,7 @@ const MapComponent = () => {
       center={[0, 0]}
       zoom={3}
       scrollWheelZoom={true}
-      className="w-screen h-[94vh]"
+      className="w-screen h-[90vh]"
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
