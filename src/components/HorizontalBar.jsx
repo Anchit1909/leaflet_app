@@ -31,7 +31,7 @@ const HorizontalBar = () => {
         style={{ width: `${(count1 / totalSum) * 100}%` }}
         className="h-2 bg-red-300 rounded-l-full"
       >
-        <div className="pt-2 flex flex-row space-x-8 px-10 items-center justify-center">
+        <div className="pt-2 flex flex-row space-x-8 px-10 items-center justify-center text-sm">
           <span className="font-bold hidden lg:flex">{"Data < 300"}</span>
           <span>{(count1 / totalSum) * 100}%</span>
         </div>
@@ -40,9 +40,9 @@ const HorizontalBar = () => {
         style={{ width: `${(count2 / totalSum) * 100}%` }}
         className="h-2 bg-red-400"
       >
-        <div className="pt-2 flex flex-row space-x-8 px-10 items-center justify-center">
+        <div className="pt-2 flex flex-row space-x-8 px-10 items-center justify-center text-sm">
           <span className="font-bold hidden xl:flex">
-            {"Data > 300 & Data < 500"}
+            {"Data > 300 & < 500"}
           </span>
           <span>{(count2 / totalSum) * 100}%</span>
         </div>
@@ -51,9 +51,9 @@ const HorizontalBar = () => {
         style={{ width: `${(count3 / totalSum) * 100}%` }}
         className="h-2 bg-red-500"
       >
-        <div className="pt-2 flex flex-row space-x-8 px-10 items-center justify-center">
+        <div className="pt-2 flex flex-row space-x-8 px-10 items-center justify-center text-sm">
           <span className="font-bold hidden lg:flex">
-            {"Data > 500 & Data < 700"}
+            {"Data > 500 & < 700"}
           </span>
           <span>{(count3 / totalSum) * 100}%</span>
         </div>
@@ -62,7 +62,7 @@ const HorizontalBar = () => {
         style={{ width: `${(count4 / totalSum) * 100}%` }}
         className="h-2 bg-red-600 rounded-r-full"
       >
-        <div className="pt-2 flex flex-row space-x-4 px-10 items-center justify-center">
+        <div className="pt-2 flex flex-row space-x-4 px-10 items-center justify-center text-sm">
           <span className="font-bold hidden lg:flex">{"Data > 700"}</span>
           <span>{(count4 / totalSum) * 100}%</span>
         </div>
