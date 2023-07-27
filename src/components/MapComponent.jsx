@@ -35,7 +35,23 @@ const MapComponent = () => {
             fillOpacity={0.5}
             center={val.coordinate}
             radius={val.data + 1000000 / 3}
-          ></Circle>
+          >
+            <Popup>
+              <div className="flex flex-col space-y-1 p-2">
+                <h5 className="text-base">
+                  <span className="font-bold">Region:</span> {val.region}
+                </h5>
+                <h6 className="text-base">
+                  <span className="font-bold">Available Network:</span>{" "}
+                  {val.data}
+                </h6>
+                <h6 className="text-base">
+                  <span className="font-bold">Usage:</span> $
+                  {Math.round((val.data / 3) * 2)}
+                </h6>
+              </div>
+            </Popup>
+          </Circle>
         );
       })}
     </MapContainer>
