@@ -26,7 +26,7 @@ let totalSum = count1 + count2 + count3 + count4;
 
 const HorizontalBar = () => {
   return (
-    <div className="flex flex-row mt-3 mx-auto px-4">
+    <div className="flex flex-row my-3 mx-auto px-4">
       <div
         style={{ width: `${(count1 / totalSum) * 100}%` }}
         className="h-2 bg-red-300 rounded-l-full"
