@@ -1,5 +1,11 @@
 import React from "react";
-import { MapContainer, TileLayer, Popup, Circle } from "react-leaflet";
+import {
+  MapContainer,
+  TileLayer,
+  Popup,
+  Circle,
+  Rectangle,
+} from "react-leaflet";
 import Data from "../utils/data";
 import "leaflet/dist/leaflet.css";
 
@@ -19,22 +25,30 @@ const MapComponent = () => {
 
         let data = val.data;
         if (data < 300) {
-          color = "rgb(252 165 165)";
+          color = "#00008B";
         } else if (data > 300 && data < 500) {
-          color = "rgb(248 113 113)";
+          color = "#00468B";
         } else if (data > 500 && data < 700) {
-          color = "rgb(239 68 68)";
+          color = "#0096FF";
         } else {
-          color = "rgb(220 38 38)";
+          color = "#0000FF";
         }
 
+        const southWest = [
+          val.coordinate[0] - val.data / 200, //200 is used randomly to shrink the size of the square accoring to the map.
+          val.coordinate[1] - val.data / 200,
+        ];
+        const northEast = [
+          val.coordinate[0] + val.data / 200,
+          val.coordinate[1] + val.data / 200,
+        ];
+
         return (
-          <Circle
+          <Rectangle
             key={index}
+            bounds={[southWest, northEast]}
             color={color}
             fillOpacity={0.5}
-            center={val.coordinate}
-            radius={val.data + 1000000 / 3}
           >
             <Popup>
               <div className="flex flex-col space-y-1 p-2">
@@ -51,7 +65,7 @@ const MapComponent = () => {
                 </h6>
               </div>
             </Popup>
-          </Circle>
+          </Rectangle>
         );
       })}
     </MapContainer>
